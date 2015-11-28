@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Styleguide by filug</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Styleguide</h1>
+        <h2>Style guides for Google-originated open-source projects</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/filug/styleguide/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/filug/styleguide/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/filug/styleguide" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h3>
+<a id="google-c-style-guide-fork" class="anchor" href="#google-c-style-guide-fork" aria-hidden="true"><span class="octicon octicon-link"></span></a>Google C++ Style Guide fork</h3>
+
+<p><a href="https://google.com">Google</a> made very helpful <a href="https://google.github.io/styleguide/cppguide.html">Google C++ Style Guide</a> in addition small (small but still power full) <a href="https://github.com/google/styleguide/blob/gh-pages/cpplint/cpplint.py">cpplint.py</a> <a href="https://www.python.org">Python</a> script was prepared by them.</p>
+
+<h3>
+<a id="cmake-support" class="anchor" href="#cmake-support" aria-hidden="true"><span class="octicon octicon-link"></span></a>CMake support</h3>
+
+<p>Original <a href="https://github.com/google/styleguide">styleguide repository</a> from <a href="https://google.com">Google</a> doesn't contain any support for <a href="https://cmake.org">CMake</a> build system.</p>
+
+<p><a href="https://github.com/filug/styleguide">Here</a> required <a href="https://cmake.org">CMake</a> module is available and it's quite easy to integrate <a href="https://google.github.io/styleguide/cppguide.html">Google C++ Style Guide</a> with any <a href="https://cmake.org">CMake</a> based project.</p>
+
+<h4>
+<a id="setup" class="anchor" href="#setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup</h4>
+
+<ol>
+<li>Clone <a href="https://github.com/filug/styleguide">git@github.com:filug/styleguide.git</a> repository somewhere inside your project,</li>
+<li>Include <em>cpplint.cmake</em> file in your root <em>CMakeLists.txt</em> file, for example:
+<code>include(3rdParty/styleguide/cmake/cpplint.cmake)</code>
+</li>
+<li>Configure which project directories should be checked by <a href="https://github.com/google/styleguide/blob/gh-pages/cpplint/cpplint.py">cpplint.py</a>.</li>
+</ol>
+
+<h4>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h4>
+
+<p>You can run <em>Source code style verification</em> via <em>make lint</em> command.
+In addition <em>source code style verification</em> will be also checked when target <em>all</em> will be built. </p>
+
+<h4>
+<a id="output" class="anchor" href="#output" aria-hidden="true"><span class="octicon octicon-link"></span></a>Output</h4>
+
+<pre><code>$ make
+[100%] cpplint.py: Checking source code style
+Done processing /home/filug/projects/test-prj/src/dir1/file1.c
+Done processing /home/filug/projects/test-prj/src/dir1/file1.h
+Done processing /home/filug/projects/test-prj/src/common.h
+Total errors found: 0
+</code></pre>
+
+<h4>
+<a id="configuration" class="anchor" href="#configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configuration</h4>
+
+<p>Please read <a href="https://github.com/filug/styleguide/blob/master/cmake/cpplint.cmake">cpplint.cmake</a> file to check which parameters can be configured.</p>
+      </section>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-70786087-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
