@@ -69,6 +69,26 @@ Total errors found: 0
 </code></pre>
 
 <h4>
+<a id="ctest" class="anchor" href="#ctest" aria-hidden="true"><span class="octicon octicon-link"></span></a>CTest</h4>
+
+<p><a href="3rdParty/styleguide/cmake/cpplint.cmake">cpplint.cmake</a> module is also using <a href="https://cmake.org/cmake/help/v3.0/command/add_test.html?highlight=add_test">add_test</a> command to add <em>lint</em> to the <a href="https://cmake.org/cmake/help/v3.0/manual/ctest.1.html#manual:ctest(1)">CTest framework</a>.</p>
+
+<p>Ant time when <code>make test</code> command is started <a href="https://github.com/google/styleguide/blob/gh-pages/cpplint/cpplint.py">cpplint.py</a> is checking source code.</p>
+
+<p>An output example is presented below.</p>
+
+<pre><code>$ make test
+Running tests...
+Test project /home/filug/projects/uleapp/build
+    Start 1: lint.src
+1/1 Test #1: lint.src .........................   Passed    0.28 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.28 sec
+</code></pre>
+
+<h4>
 <a id="configuration" class="anchor" href="#configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configuration</h4>
 
 <p>Please read <a href="https://github.com/filug/styleguide/blob/master/cmake/cpplint.cmake">cpplint.cmake</a> file to check which parameters can be configured.</p>
